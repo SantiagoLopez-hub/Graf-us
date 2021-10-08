@@ -17,7 +17,12 @@ For the visualisation, when a node is hovered over, display basic information.<b
 To be made with nodes that hold data and information about the nodes it links with.
 
 <h2>Tools</h2>
-Dart (<a href="https://flutter.dev/docs">Flutter</a>), Python (<a href="https://flask.palletsprojects.com/en/2.0.x/quickstart/">flask</a>, <a href="https://matplotlib.org">matplotlib</a>/<a href="https://pandas.pydata.org">pandas</a>), <a href="https://graphql.org/code/#python">GraphQL</a>, RESTful APIs (unless we use a DBMS).
+<ul>
+  <li>Dart (<a href="https://flutter.dev/docs">Flutter</a>)</li>
+  <li>Python (<a href="https://flask.palletsprojects.com/en/2.0.x/quickstart/">flask</a>, <a href="https://matplotlib.org">matplotlib</a>/<a href="https://pandas.pydata.org">pandas</a>)</li>
+  <li><a href="https://graphql.org/code/#python">GraphQL</a></li>
+  <li>RESTful APIs (unless we use a DBMS)</li>
+</ul>
 
 <h2>Domain ideas (if needed)</h2>
 
