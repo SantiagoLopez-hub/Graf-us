@@ -19,6 +19,10 @@ To be made with nodes that hold data and information about the nodes it links wi
 <h2>Tools</h2>
 Dart (<a href="https://flutter.dev/docs">Flutter</a>), Python (<a href="https://flask.palletsprojects.com/en/2.0.x/quickstart/">flask</a>, <a href="https://matplotlib.org">matplotlib</a>/<a href="https://pandas.pydata.org">pandas</a>), <a href="https://graphql.org/code/#python">GraphQL</a>, RESTful APIs (unless we use a DBMS).
 
+<h2>Domain ideas (if needed)</h2>
+
+graphs.network - £4.53
+
 <hr>
 
 <h4>Something that is needed</h4>
@@ -26,4 +30,3 @@ Dart (<a href="https://flutter.dev/docs">Flutter</a>), Python (<a href="https://
 <h4>Something that is not currently available in the proposed form</h4>
 
 <h4>State your case - why is this a good project? What value does it add?</h4>
-
