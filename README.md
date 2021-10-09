@@ -18,6 +18,7 @@ To be made with nodes that hold data and information about the nodes it links wi
 
 <h2>Tools</h2>
 <ul>
+  <li><a href="https://docs.docker.com">Docker</a></li>
   <li>Dart (<a href="https://flutter.dev/docs">Flutter</a>)</li>
   <li>Python (<a href="https://flask.palletsprojects.com/en/2.0.x/quickstart/">flask</a>, <a href="https://matplotlib.org">matplotlib</a>/<a href="https://pandas.pydata.org">pandas</a>)</li>
   <li><a href="https://graphql.org/code/#python">GraphQL</a></li>
