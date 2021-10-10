@@ -1,4 +1,4 @@
-<h1>Analysis Tool | Computing Project 2</h1>
+<h1>Graf-us | Analysis Tool</h1>
 
 Data analysis and visualisation of people for companies to pick and choose who to contact.
 
@@ -27,6 +27,10 @@ To be made with nodes that hold data and information about the nodes it links wi
 </ul>
 
 <h2>Domain ideas (if needed)</h2>
+
+graf-us.com - £0.99
+
+graf-us.co.uk - £0.01
 
 graphs.network - £4.53
 
