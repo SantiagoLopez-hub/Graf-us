@@ -22,7 +22,7 @@ To be made with nodes that hold data and information about the nodes it links wi
   <li>Dart (<a href="https://flutter.dev/docs">Flutter</a>) / JavaScript (<a href="https://reactnative.dev">React Native</a> & Node.js)</li>
   <li>Python (<a href="https://docs.djangoproject.com/en/3.2/">Django</a>, <a href="https://matplotlib.org">Matplotlib</a>/<a href="https://pandas.pydata.org">Pandas</a>)</li>
   <li>GraphQL (<a href="https://graphql.org/code/#python">Graphene</a>)</li>
-  <li><a href="http://mongodb.com">MongoDB</a></li>
+  <li><a href="https://www.postgresql.org">PostgreSQL</a> / <a href="http://mongodb.com">MongoDB</a></li>
   <li>RESTful APIs (unless we use a DBMS)</li>
 </ul>
 
