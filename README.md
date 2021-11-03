@@ -41,3 +41,7 @@ graphs.network - £4.53
 <h4>Something that is not currently available in the proposed form</h4>
 
 <h4>State your case - why is this a good project? What value does it add?</h4>
+
+
+## Basic Structure
+![alt text](Images/basic.png "Responsive Image") 
