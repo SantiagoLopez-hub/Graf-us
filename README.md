@@ -45,3 +45,6 @@ graphs.network - £4.53
 
 ## Basic Structure
 ![alt text](Images/basic.png "Responsive Image") 
+
+## Flowchart connection
+![alt text](Images/flowdiagram.png "Flowchart Image") 
