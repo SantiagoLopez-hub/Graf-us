@@ -26,6 +26,8 @@ To be made with nodes that hold data and information about the nodes it links wi
   <li>RESTful APIs (unless we use a DBMS)</li>
 </ul>
 
+<a href="https://www.geeksforgeeks.org/how-to-connect-django-with-reactjs/">Connect Django with ReactJS</a>
+
 <h2>Domain ideas (if needed)</h2>
 
 graf-us.com - £0.99
