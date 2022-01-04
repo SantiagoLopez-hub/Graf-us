@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
+    "process": "^0.11.10",
     "react-router-dom": "^6.2.1"
   }
 }
