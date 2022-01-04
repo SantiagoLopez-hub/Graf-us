@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a10ad338-0935-4742-84ed-6968625bca1f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Graf_us/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Graf_us/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Graf_us/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Graf_us/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Graf_us/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graf_us/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Graf_us/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graf_us/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Graf_us/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1641299824510</updated>
-      <workItem from="1641299825684" duration="336000" />
+      <workItem from="1641299825684" duration="813000" />
     </task>
     <servers />
   </component>
