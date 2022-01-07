@@ -9,12 +9,6 @@ then edit the CSS and HTML files to build on the generated website.
 
 <hr>
 
-<h1>Installation</h1>
-
-There are a multitude of required modules, please follow <b>the first 3 videos</b> in <a href="https://www.youtube.com/watch?v=JD-age0BPVo&list=PLzMcBGfZo4-kCLWnGmK0jUBmGLaJxvi4j">this list</a> and download all packages, including django, node, and npm; to get started.
-
-<hr>
-
 Example of undirected graph with dense edges to be used as the data structure for people/companies:
 
 <img src="https://adatis.co.uk/wp-content/uploads/Black-n-White.png">
