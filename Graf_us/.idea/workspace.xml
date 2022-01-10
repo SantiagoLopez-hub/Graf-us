@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a10ad338-0935-4742-84ed-6968625bca1f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/babel.config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/static/frontend/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/static/frontend/main.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/templates/frontend/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graf_us/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Graf_us/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graf_us/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Graf_us/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="a10ad338-0935-4742-84ed-6968625bca1f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +29,6 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -84,6 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1641299824510</updated>
       <workItem from="1641299825684" duration="5917000" />
+      <workItem from="1641780758096" duration="253000" />
     </task>
     <servers />
   </component>
