@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a10ad338-0935-4742-84ed-6968625bca1f" name="Changes" comment="" />
+    <list default="true" id="a10ad338-0935-4742-84ed-6968625bca1f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Graf_us.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Graf_us.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +36,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="Graf_us" type="Python.DjangoServer" factoryName="Django server">
@@ -68,6 +73,9 @@
       <updated>1641299824510</updated>
       <workItem from="1641299825684" duration="5917000" />
       <workItem from="1641780758096" duration="390000" />
+      <workItem from="1641816747071" duration="63000" />
+      <workItem from="1641818078583" duration="18000" />
+      <workItem from="1641818125127" duration="2287000" />
     </task>
     <servers />
   </component>
