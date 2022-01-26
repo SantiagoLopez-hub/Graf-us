@@ -9,7 +9,7 @@ then edit the CSS and HTML files to build on the generated website.
 
 <hr>
 
-<h2> How to run /h2>
+<h2> How to run </h2>
   <ul>
     <li> Clone Repo </li>
     <li> cd to frontend </li>
