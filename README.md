@@ -10,11 +10,13 @@ then edit the CSS and HTML files to build on the generated website.
 <hr>
 
 <h2> How to run /h2>
-  <p> Clone Repo <p>
-  <p> cd to frontend </p>
-  <p> run 'npm install' </p>
-  <p> run 'npm start' </p>
-  <p> start coding </p>
+  <ul>
+    <li> Clone Repo </li>
+    <li> cd to frontend </li>
+    <li> run 'npm install' </li>
+    <li> run 'npm start' </li>
+    <li> start coding </li>
+  </ul>
 
 <hr>
 
