@@ -9,6 +9,15 @@ then edit the CSS and HTML files to build on the generated website.
 
 <hr>
 
+<h2> How to run /h2>
+  <p> Clone Repo <p>
+  <p> cd to frontend </p>
+  <p> run 'npm install' </p>
+  <p> run 'npm start' </p>
+  <p> start coding </p>
+
+<hr>
+
 Example of undirected graph with dense edges to be used as the data structure for people/companies:
 
 <img src="https://adatis.co.uk/wp-content/uploads/Black-n-White.png">
