@@ -1,7 +1,7 @@
 import React from 'react';
 import FactText from '../components/FactText';
 import AuthView from '../components/AuthView';
-import { ReactComponent as LogoSVG } from '../assets/tempLogo.svg';
+import { ReactComponent as LogoSVG } from '../assets/resources/tempLogo.svg';
 import { colors } from '../themeData';
 import CText from '../components/CText';
 import { Box, Center } from '@chakra-ui/react';

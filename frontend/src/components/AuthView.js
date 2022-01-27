@@ -1,7 +1,7 @@
 import { Box, Button, Link } from '@chakra-ui/react';
 import React from 'react';
 import { colors, shadows, textStyles } from '../themeData';
-import { ReactComponent as LinkedInSVG } from '../assets/linkedin.svg';
+import { ReactComponent as LinkedInSVG } from '../assets/resources/linkedin.svg';
 import CText from './CText';
 
 
