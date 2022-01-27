@@ -1,14 +1,15 @@
 import './App.css';
 import { colors } from './themeData';
 import AuthScreen from './pages/AuthScreen';
+import { Box } from '@chakra-ui/react';
 
 
 
 function App() {
   return (
-    <div style={styles.container}>
+    <Box style={styles.container}>
       <AuthScreen />
-    </div>
+    </Box>
   );
 }
 
