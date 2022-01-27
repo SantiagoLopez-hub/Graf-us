@@ -1,12 +1,14 @@
+import { Box } from '@chakra-ui/react';
 import React from 'react';
 import { colors } from '../themeData';
+import CText from './CText';
 
 function FactText(props) {
     return (
-        <div style={{...props.style, ...{whiteSpace: "pre-line"} }}> 
-            <div style={styles.title}>{props.title}</div>
-            <div style={styles.string}>{props.string}</div>
-        </div>
+        <Box style={{...props.style, ...{whiteSpace: "pre-line"} }}> 
+            <CText style={styles.title}>{props.title}</CText>
+            <CText style={styles.string}>{props.string}</CText>
+        </Box>
     );
 }
 
