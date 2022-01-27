@@ -5,7 +5,7 @@ import { ReactComponent as LinkedInSVG } from '../assets/linkedin.svg';
 
 function AuthButton(props) {
     return (
-        <div style={{...styles.container, ...props.style}}>
+        <div style={{...styles.container, ...props.style}} onClick={props.onClick}>
             <div style={styles.svgBox}>
                 <LinkedInSVG />
             </div>

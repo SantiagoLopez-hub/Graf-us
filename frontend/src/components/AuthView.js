@@ -11,7 +11,7 @@ function AuthView(props) {
                     <div style={{...textStyles.headline3, ...{ paddingBottom: 15 } }}>Hey there!</div>
                     <div style={{...textStyles.body1, ...{ color: colors.darkGrey, width: 230, marginBottom: 'auto', lineHeight: 1.40} }}>Sign in with you LinkedIn so we can get started to help you expand your network 🌎</div>
                 </div>
-                <AuthButton platform={'LinkedIn'} style={styles.button}/>
+                <AuthButton platform={'LinkedIn'} style={styles.button} onClick={() => console.log('Pressed')}/>
             </div>
             <div style={styles.loginText}>
                 <div style={{...textStyles.subtitle2, ...{ color: colors.grey } }}>Already Signed up?</div>
