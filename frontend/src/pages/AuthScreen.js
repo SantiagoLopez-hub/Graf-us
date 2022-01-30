@@ -13,7 +13,7 @@ function AuthScreen() {
     return (
       <Box>
         { !isMobile && <FactText style={styles.leftFact} title={'Did you know?'} string={'93% of recruiters use LinkedIn to research and recruit candidates*'}/> }
-        { !isMobile && <CText style={styles.leftSource}>*According to statistics provided by linked on </CText>}
+        { !isMobile && <CText style={styles.leftSource}>*According to statistics provided by LinkedIn </CText>}
         <Box alignItems='center'>
           <Center>
             <LogoSVG style={{ marginBottom: 12 }}/>
