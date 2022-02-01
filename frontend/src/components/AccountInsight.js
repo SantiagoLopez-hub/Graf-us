@@ -1,11 +1,11 @@
 import React from 'react';
-import { Avatar, Box, Center, HStack, IconButton, Menu, MenuButton, MenuItem, MenuList, Stack, useBreakpointValue } from '@chakra-ui/react';
+import { Avatar, Box, HStack, IconButton, Menu, MenuButton, MenuItem, MenuList, Stack, useBreakpointValue } from '@chakra-ui/react';
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 
 import { colors, textStyles } from '../themeData';
 import CText from './CText';
 
-function AccountInsight(props) {
+function AccountInsight() {
     const isMobile = useBreakpointValue({ base: true, lg: false })
 
     return (
