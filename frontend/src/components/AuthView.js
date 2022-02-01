@@ -32,7 +32,7 @@ function AuthView(props) {
                     <CText textStyle={textStyles.subtitle1} style={{ color: colors.white }}>{props.isSignIn ? 'Sign in ' : 'Log in '} in with Linkedin</CText>
                 </Button> 
             </Box>
-            <Box style={styles.loginText }>
+            <Box style={styles.loginText}>
                 <CText textStyle={textStyles.subtitle2} style={{ color: colors.grey, paddingRight: 6 }}>{props.isSignIn ? 'Already have an account?' : 'Not signed up yet?'}</CText>
                 <Link color={colors.blue} href='#' onClick={() => props.setIsSignIn(!props.isSignIn)}>
                     <CText textStyle={textStyles.subtitle2} style={{ color: colors.blue.main }}>{props.isSignIn ? 'Login ' : 'Sign up ' }instead </CText>
