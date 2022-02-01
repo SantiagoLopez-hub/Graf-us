@@ -13,7 +13,7 @@ function NavBar(props) {
     return (
         <Box w="100%" h={75} bg={colors.white}  boxShadow='sm' flexDirection={'row'} display={'flex'} paddingX={100} >
             <HStack w={'100%'} justify={'space-between'}>
-                <LogoSVG />
+                <LogoSVG cursor={'pointer'}/>
                 <HStack spacing={width*0.05} >
                     <NavBarText string={"Home"} isActive={true}/>
                     <NavBarText string={"Connect"} isActive={false}/>
