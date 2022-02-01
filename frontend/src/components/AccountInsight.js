@@ -11,7 +11,7 @@ function AccountInsight() {
     return (
         <Box>
             <HStack>
-                <Avatar name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
+                <Avatar cursor={'pointer'} name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
                 {!isMobile && 
                 <>
                 <Stack spacing={0}>
