@@ -6,7 +6,7 @@ import CText from './CText';
 
 function NavBarText(props) {
     return (
-        <Box>
+        <Box cursor={'pointer'}>
             <CText textStyle={textStyles.headline4} style={{color: props.isActive ? colors.darkGrey : colors.lightGrey, fontWeight: 400}}>{props.string}</CText>
             <Center>
                 <Box bg={props.isActive ? colors.blue.main : 'transparent' } w={2} h={2} borderRadius={10}/>

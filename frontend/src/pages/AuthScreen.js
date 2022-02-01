@@ -11,7 +11,7 @@ function AuthScreen() {
   const [isSignIn, setIsSignIn] = useState(true);
 
     return (
-      <Box>
+      <Box alignContent={'center'}>
         { !isMobile && <FactText style={styles.leftFact} title={'Did you know?'} string={'93% of recruiters use LinkedIn to research and recruit candidates*'}/> }
         { !isMobile && <CText style={styles.leftSource}>*According to statistics provided by LinkedIn </CText>}
         <Box alignItems='center'>

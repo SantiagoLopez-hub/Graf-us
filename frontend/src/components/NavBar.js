@@ -1,4 +1,4 @@
-import { Box, Center, HStack } from '@chakra-ui/react';
+import { Box, HStack } from '@chakra-ui/react';
 import React from 'react';
 
 import { colors } from '../themeData';
@@ -8,10 +8,10 @@ import useWindowDimensions from '../hooks/useWindowDimensions';
 import AccountInsight from './AccountInsight';
 
 function NavBar(props) {
-    const { height, width } = useWindowDimensions();
+    const { width } = useWindowDimensions();
 
     return (
-        <Box w={"100%"} h={75} bg={colors.white}  boxShadow='sm' flexDirection={'row'} display={'flex'} paddingX={100} pos={'absolute'} top={0}>
+        <Box w="100%" h={75} bg={colors.white}  boxShadow='sm' flexDirection={'row'} display={'flex'} paddingX={100} >
             <HStack w={'100%'} justify={'space-between'}>
                 <LogoSVG />
                 <HStack spacing={width*0.05} >
