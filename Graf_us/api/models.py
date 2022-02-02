@@ -15,3 +15,15 @@ class User(models.Model):
     city = models.CharField(max_length=50)
     contact_number = models.CharField(max_length=20)
     created_at = models.DateTimeField(auto_now_add=True)
+
+
+class Connection(models.Model):
+    # Many to one Relationship
+    # from_user = models.ForeignKey(User, on_delete=models.CASCADE)
+    # to_user = models.ForeignKey(User)
+
+    tr_id
+    req_res_details
+    approval_status
+    f_email
+    email_id
