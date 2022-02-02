@@ -3,8 +3,8 @@ import { Box, Button, Link } from '@chakra-ui/react';
 import { useLinkedIn } from 'react-linkedin-login-oauth2';
 
 import { colors, shadows, textStyles } from '../themeData';
-import { ReactComponent as LinkedInSVG } from '../assets/resources/linkedin.svg';
 import CText from './CText';
+import LinkedInButton from './LinkedInButton';
 
 
 function AuthView(props) {
@@ -28,9 +28,7 @@ function AuthView(props) {
                     <CText textStyle={textStyles.headline3} style={{ paddingBottom: 15 }}>Hey there!</CText>
                     <CText textStyle={textStyles.body1} style={{ color: colors.darkGrey, width: 230, marginBottom: 'auto', lineHeight: 1.40 }}>{props.isSignIn ? 'Sign ' : 'Login ' }in with you LinkedIn so we can get started to help you expand your network 🌎</CText>
                 </Box>
-                <Button leftIcon={<LinkedInSVG />} bg={colors.blue.main} style={{ marginTop: 18 }} onClick={linkedInLogin}>
-                    <CText textStyle={textStyles.subtitle1} style={{ color: colors.white }}>{props.isSignIn ? 'Sign in ' : 'Log in '} in with Linkedin</CText>
-                </Button> 
+                <LinkedInButton onClick={linkedInLogin} label={`${props.isSignIn ? 'Sign in ' : 'Log in '} in with LinkedIn`}/>
             </Box>
             <Box style={styles.loginText}>
                 <CText textStyle={textStyles.subtitle2} style={{ color: colors.grey, paddingRight: 6 }}>{props.isSignIn ? 'Already have an account?' : 'Not signed up yet?'}</CText>

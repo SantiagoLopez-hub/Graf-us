@@ -1,6 +1,7 @@
 import { Box, Button, HStack } from '@chakra-ui/react';
 import React from 'react';
 import { colors } from '../themeData';
+import CButton from './CButton';
 import CText from './CText';
 import StatText from './StatText';
 
@@ -14,7 +15,7 @@ function StatsBox(props) {
                 <StatText subtitle='Profile Quality' value='75%'/>
                 <StatText subtitle='Lorem Ipsum' value='23'/>
                 <StatText subtitle='Lorem Ipsum' value='233'/>
-                <Button borderColor={colors.blue.main} variant={'outline'}><CText style={{ color: colors.blue.main }}>Change Circle</CText></Button>
+                <CButton borderColor={colors.blue.main} variant={'outline'} label={'Change Circle'}/>
             </HStack>
         </Box>
     );
