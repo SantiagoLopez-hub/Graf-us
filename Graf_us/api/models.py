@@ -1,8 +1,9 @@
 from django.db import models
 
 
+# https://docs.djangoproject.com/en/4.0/topics/db/examples/
 class User(models.Model):
-    email = models.CharField(max_length=320, unique=True, blank=False, default=None)
+    email = models.EmailField(unique=True, blank=False, default=None)
     password = models.CharField(max_length=256, blank=False, default=None)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
