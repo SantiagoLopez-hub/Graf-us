@@ -1,16 +1,33 @@
 import './App.css';
 import { colors } from './themeData';
 import AuthScreen from './pages/AuthScreen';
+import JobScreen from './pages/JobScreen';
+import ConnectScreen from './pages/ConnectScreen';
+import ContactScreen from './pages/ContactScreen';
+import AboutUsScreen from './pages/AboutUsScreen';
 import { Box } from '@chakra-ui/react';
 import GrafScreen from './pages/GrafScreen';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
 
 
 function App() {
   return (
     <Box style={styles.container}>
-      {/* <AuthScreen /> */}
-      <GrafScreen />
+       <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<AuthScreen />} />
+          <Route path='/graf' element={<GrafScreen />} />
+          <Route path='/jobs' element={<JobScreen />} />
+          <Route path='/connect' element={<ConnectScreen />} />
+          <Route path='/contact-us' element={<ContactScreen />} />
+          <Route path='/about-us' element={<AboutUsScreen />} />
+        </Routes>
+      </BrowserRouter>,
     </Box>
   );
 }

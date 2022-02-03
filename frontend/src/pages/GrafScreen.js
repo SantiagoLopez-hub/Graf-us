@@ -16,7 +16,7 @@ function GrafScreen(props) {
                 <StatsBox />
                 <ProfileDetailTile />
             </HStack>
-            <D3Test />
+            {/* <D3Test /> */}
         </Box>     
     );
 }

@@ -10,7 +10,7 @@ import LinkedInButton from './LinkedInButton';
 function AuthView(props) {
     const { linkedInLogin } = useLinkedIn({
         clientId: '78y1jk156vmhwy',
-        redirectUri: window.location.origin, // for Next.js, you can use `${typeof window === 'object' && window.location.origin}/linkedin`
+        redirectUri: `${window.location.origin}/graf`, // for Next.js, you can use `${typeof window === 'object' && window.location.origin}/linkedin`
         onSuccess: (code) => {  
           console.log(code);
         },
@@ -28,7 +28,7 @@ function AuthView(props) {
                     <CText textStyle={textStyles.headline3} style={{ paddingBottom: 15 }}>Hey there!</CText>
                     <CText textStyle={textStyles.body1} style={{ color: colors.darkGrey, width: 230, marginBottom: 'auto', lineHeight: 1.40 }}>{props.isSignIn ? 'Sign ' : 'Login ' }in with you LinkedIn so we can get started to help you expand your network 🌎</CText>
                 </Box>
-                <LinkedInButton onClick={linkedInLogin} label={`${props.isSignIn ? 'Sign in ' : 'Log in '} in with LinkedIn`}/>
+                <LinkedInButton onClick={linkedInLogin} marginTop={4} label={`${props.isSignIn ? 'Sign in ' : 'Log in '} in with LinkedIn`}/>
             </Box>
             <Box style={styles.loginText}>
                 <CText textStyle={textStyles.subtitle2} style={{ color: colors.grey, paddingRight: 6 }}>{props.isSignIn ? 'Already have an account?' : 'Not signed up yet?'}</CText>
