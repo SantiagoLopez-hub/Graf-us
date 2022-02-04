@@ -9,7 +9,7 @@ export const colors = {
     darkGrey: '#65676A',
     mediumGrey: '#8E949C',
     lightGrey: '#E4E6EB',
-    black: '#050505',
+    black: '050505',
     pink: {
         main: '#EB5298',
         bg: '#F7E7EE'

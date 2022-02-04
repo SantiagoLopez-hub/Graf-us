@@ -11,7 +11,7 @@ function AuthScreen() {
   const [isSignIn, setIsSignIn] = useState(true);
 
     return (
-      <Center>
+      <Box>
         { !isMobile && <FactText style={styles.leftFact} title={'Did you know?'} string={'93% of recruiters use LinkedIn to research and recruit candidates*'}/> }
         { !isMobile && <CText style={styles.leftSource}>*According to statistics provided by LinkedIn </CText>}
         <Box alignItems='center'>
@@ -22,7 +22,7 @@ function AuthScreen() {
         </Box>
         { !isMobile && <FactText style={styles.rightFact} title={'Did you also know?'} string={'Using our advanced algorithms and revolutionary blockchain implementation you can expand your network like crazy**'}/> }
         { !isMobile && <CText style={styles.rightSource}>**According to our completely biased opinion </CText>}
-      </Center>
+      </Box>
     );
   }
 
