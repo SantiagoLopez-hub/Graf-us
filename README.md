@@ -20,9 +20,9 @@ And run the following inside the frontend directory to install all node modules:
 npm install
 ```
 
-<h1>Executing Applications</h1>
+<h1>Running Application</h1>
 
-The following has to be run concurrently, open two terminal windows to achieve this easily.
+The following two commands have to be run concurrently, open two terminal windows to achieve this easily.
 To run Django, use the following command inside the Graf_us directory:
 ```
 python manage.py runserver
@@ -31,9 +31,23 @@ To run React, go to the frontend directory and run:
 ```
 npm run dev
 ```
-
 The React application runs on port 3000 and resides in the "frontend" directory, while Django uses port 8000 and is set up in the "api" directory.
 
+<h1>Accesing Live Server</h1>
+<pre>URL:              <a href="https://graf-us.co.uk/">graf-us.co.uk</a></br>
+SSH Username:     graf_us</br>
+SSH Host:         graf-us.co.uk</br>
+SSH Port:         22</pre>
+</br>
+
+Access through SSH using the terminal:
+```
+ssh -l graf_us graf-us.co.uk
+```
+The current password is:
+```
+ComputingProject@0505
+```
 
 <hr>
 
@@ -56,22 +70,8 @@ To be made with nodes that hold data and information about the nodes it links wi
 
 <a href="https://www.geeksforgeeks.org/how-to-connect-django-with-reactjs/">Connect Django with ReactJS</a>
 
-<h2>Domain ideas (if needed)</h2>
-
-graf-us.com - £0.99
-
-graf-us.co.uk - £0.01
-
-graphs.network - £4.53
 
 <hr>
-
-<h4>Something that is needed</h4>
-
-<h4>Something that is not currently available in the proposed form</h4>
-
-<h4>State your case - why is this a good project? What value does it add?</h4>
-
 
 ## Basic Structure
 ![alt text](Images/basic.png "Responsive Image") 
