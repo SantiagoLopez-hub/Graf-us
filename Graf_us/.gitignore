@@ -1,0 +1,5 @@
+# Pycharm IDE
+.idea
+
+# Node modules
+frontend/node_modules
