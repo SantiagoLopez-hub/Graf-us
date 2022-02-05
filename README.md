@@ -11,7 +11,14 @@ then edit the CSS and HTML files to build on the generated website.
 
 <h1>Installation</h1>
 
-There are a multitude of required modules, please follow <b>the first 3 videos</b> in <a href="https://www.youtube.com/watch?v=JD-age0BPVo&list=PLzMcBGfZo4-kCLWnGmK0jUBmGLaJxvi4j">this list</a> and download all packages, including django, node, and npm; to get started.
+There are a multitude of required modules, please run the following to download all python modules:
+```
+pip install -r requirements.txt
+```
+And run the following inside the frontend directory to install all node modules:
+```
+npm install
+```
 
 <hr>
 
