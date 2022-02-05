@@ -20,6 +20,21 @@ And run the following inside the frontend directory to install all node modules:
 npm install
 ```
 
+<h1>Executing Applications</h1>
+
+The following has to be run concurrently, open two terminal windows to achieve this easily.
+To run Django, use the following command inside the Graf_us directory:
+```
+python manage.py runserver
+```
+To run React, go to the frontend directory and run:
+```
+npm run dev
+```
+
+The React application runs on port 3000 and resides in the "frontend" directory, while Django uses port 8000 and is set up in the "api" directory.
+
+
 <hr>
 
 Example of undirected graph with dense edges to be used as the data structure for people/companies:
