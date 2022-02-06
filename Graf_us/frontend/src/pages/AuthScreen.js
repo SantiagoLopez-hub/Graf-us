@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, Center, useBreakpointValue } from '@chakra-ui/react';
 import FactText from '../components/FactText';
 import AuthView from '../components/AuthView';
-import { ReactComponent as LogoSVG } from '../assets/resources/tempLogo.svg';
+// import { ReactComponent as LogoSVG } from '../assets/resources/tempLogo.svg';
 import { colors } from '../themeData';
 import CText from '../components/CText';
 
@@ -16,7 +16,7 @@ function AuthScreen() {
         { !isMobile && <CText style={styles.leftSource}>*According to statistics provided by LinkedIn </CText>}
         <Box alignItems='center'>
           <Center>
-            <LogoSVG style={{ marginBottom: 12 }}/>
+            {/*<LogoSVG style={{ marginBottom: 12 }}/>*/}
           </Center>
           <AuthView isSignIn={isSignIn} setIsSignIn={setIsSignIn}/>  
         </Box>
