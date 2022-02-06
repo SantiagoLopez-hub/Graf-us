@@ -14,6 +14,7 @@ node_modules/
 __pycache__/
 /migrations/
 static/frontend/main.js
+static/frontend/main.js.LICENSE.txt
 
 # misc
 .DS_Store
