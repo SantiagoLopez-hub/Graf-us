@@ -1,16 +1,16 @@
 import React from 'react';
-// import '../App.css';
-import { colors } from '../themeData';
-import AuthScreen from '../pages/AuthScreen';
+import { colors } from './themeData';
+import AuthScreen from './pages/AuthScreen';
 import { Box } from '@chakra-ui/react';
-import GrafScreen from '../pages/GrafScreen';
+import GrafScreen from './pages/GrafScreen';
 import {
   BrowserRouter, Routes, Route
 } from "react-router-dom";
-import JobScreen from "../pages/JobScreen";
-import ConnectScreen from "../pages/ConnectScreen";
-import ContactScreen from "../pages/ContactScreen";
-import AboutUsScreen from "../pages/AboutUsScreen";
+import JobScreen from "./pages/JobScreen";
+import ConnectScreen from "./pages/ConnectScreen";
+import ContactScreen from "./pages/ContactScreen";
+import AboutUsScreen from "./pages/AboutUsScreen";
+// import '../App.css';
 
 function App() {
   return (
