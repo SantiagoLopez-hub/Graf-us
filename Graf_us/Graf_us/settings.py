@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'Graf_us.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(str(BASE_DIR), 'db.sqlite3'),
     }
 }
 
