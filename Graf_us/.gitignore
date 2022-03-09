@@ -6,3 +6,6 @@ frontend/node_modules
 
 # Custom attributes
 .DS_Store
+
+# Remove cached python
+api/__pycache__/
