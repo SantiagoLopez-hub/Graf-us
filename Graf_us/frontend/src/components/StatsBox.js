@@ -5,7 +5,7 @@ import CButton from './CButton';
 import CText from './CText';
 import StatText from './StatText';
 
-function StatsBox(props) {
+function StatsBox({ openModal }) {
     return (
         <Box w='100%' h={85} bg={colors.white} borderRadius={10} boxShadow={'sm'} padding={2}>
             <HStack justify={'space-around'}>
@@ -15,7 +15,7 @@ function StatsBox(props) {
                 <StatText subtitle='Profile Quality' value='75%'/>
                 <StatText subtitle='Lorem Ipsum' value='23'/>
                 <StatText subtitle='Lorem Ipsum' value='233'/>
-                <CButton borderColor={colors.blue.main} variant={'outline'} label={'Change Circle'}/>
+                <CButton borderColor={colors.blue.main} variant={'outline'} label={'Change Circle'} onClick={openModal} />
             </HStack>
         </Box>
     );

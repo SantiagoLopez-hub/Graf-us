@@ -2,7 +2,7 @@ import { Box, HStack } from '@chakra-ui/react';
 import React from 'react';
 
 import { colors } from '../themeData';
-// import { ReactComponent as LogoSVG } from '../assets/resources/tempLogo.svg';
+// import { ReactComponent as LogoSVG } from '../assets/resources/LogoSVG';
 import NavBarText from './NavBarText';
 import useWindowDimensions from '../hooks/useWindowDimensions';
 import AccountInsight from './AccountInsight';
@@ -13,11 +13,11 @@ function NavBar(props) {
     return (
         <Box w="100%" h={75} bg={colors.white}  boxShadow='sm' flexDirection={'row'} display={'flex'} paddingX={100} >
             <HStack w={'100%'} justify={'space-between'}>
-                {/*<LogoSVG cursor={'pointer'}/>*/}
+                {/* <LogoSVG cursor={'pointer'}/> */}
                 <HStack spacing={width*0.05} >
-                    <NavBarText string={"Home"} isActive={true}/>
-                    <NavBarText string={"Connect"} isActive={false}/>
-                    <NavBarText string={"Jobs"} isActive={false}/>
+                    <NavBarText string={"Homeee"} isActive={true}/>
+                    <NavBarText string={"dffs"} isActive={false}/>
+                    <NavBarText string={"f"} isActive={false}/>
                     <NavBarText string={"About Us"} isActive={false}/>
                     <NavBarText string={"Contact"} isActive={false}/>
                 </HStack>
