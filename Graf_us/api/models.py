@@ -16,13 +16,11 @@ class User(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 
-# class Connection(models.Model):
-#     # Many to one Relationship
-#     # from_user = models.ForeignKey(User, on_delete=models.CASCADE)
-#     # to_user = models.ForeignKey(User)
-#
-#     tr_id
-#     req_res_details
-#     approval_status
-#     f_email
-#     email_id
+# Many-to-one Relationship with User
+class Connection(models.Model):
+    from_user = models.ForeignKey(
+        User,
+        related_name='%(class)s_from_user',
+        on_delete=models.CASCADE)
+    to_user = models.ForeignKey(User, on_delete=models.CASCADE)
+    approval_status = models.BooleanField(default=False)
