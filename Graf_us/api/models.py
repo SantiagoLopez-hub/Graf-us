@@ -39,3 +39,12 @@ class Connection(models.Model):
     )
     to_user = models.ForeignKey(User, on_delete=models.CASCADE)
     approval_status = models.BooleanField(default=False)
+
+
+# Many-to-one Relationship with User
+class Post(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    title = models.CharField(max_length=255, null=False)
+    caption = models.TextField()
+    likes = models.IntegerField()
+    created_at = models.DateTimeField(auto_now_add=True)
