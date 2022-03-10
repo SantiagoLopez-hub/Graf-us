@@ -29,7 +29,7 @@ function AccountInsight() {
                     />
                     <MenuList>
                         <MenuItem icon={<KeyboardArrowDownRoundedIcon />} command='⌘T'>
-                        Change Bla bla
+                        Account Details
                         </MenuItem>
                         </MenuList>
                 </Menu>

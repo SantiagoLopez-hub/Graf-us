@@ -1,22 +1,25 @@
-import React from 'react';
+// import './App.css';
 import { colors } from './themeData';
 import AuthScreen from './pages/AuthScreen';
+import JobScreen from './pages/JobScreen';
+import ConnectScreen from './pages/ConnectScreen';
+import ContactScreen from './pages/ContactScreen';
+import AboutUsScreen from './pages/AboutUsScreen';
 import { Box } from '@chakra-ui/react';
 import GrafScreen from './pages/GrafScreen';
 import {
-  BrowserRouter, Routes, Route
+  BrowserRouter,
+  Routes,
+  Route
 } from "react-router-dom";
-import JobScreen from "./pages/JobScreen";
-import ConnectScreen from "./pages/ConnectScreen";
-import ContactScreen from "./pages/ContactScreen";
-import AboutUsScreen from "./pages/AboutUsScreen";
-// import '../App.css';
+import ForceGraphVis from "./pages/ForceGraphVis";
+
+
 
 function App() {
   return (
     <Box style={styles.container}>
-
-      <BrowserRouter>
+       <BrowserRouter>
         <Routes>
           <Route path="/" element={<AuthScreen />} />
           <Route path='/graf' element={<GrafScreen />} />
@@ -25,15 +28,15 @@ function App() {
           <Route path='/contact-us' element={<ContactScreen />} />
           <Route path='/about-us' element={<AboutUsScreen />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter>,
     </Box>
   );
 }
 
 const styles = {
   container: {
-    display: 'flex',
-    justifyContent:'center',
+    display: 'flex', 
+    justifyContent:'center', 
     width: '100%',
     height: '100vh',
     backgroundColor: colors.backgroundColor,
