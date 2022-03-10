@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User, Connection
+from .models import User, Connection, Profile
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -12,3 +12,11 @@ class ConnectionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Connection
         fields = ('from_user', 'to_user', 'approval_status')
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+    user = UserSerializer(required=True)
+
+    class Meta:
+        model = Profile
+        fields = ('user', 'description', 'college', 'university', 'current_company', 'hobbies')
