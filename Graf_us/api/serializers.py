@@ -15,8 +15,6 @@ class ConnectionSerializer(serializers.ModelSerializer):
 
 
 class ProfileSerializer(serializers.ModelSerializer):
-    user = UserSerializer(required=True)
-
     class Meta:
         model = Profile
         fields = ('user', 'description', 'college', 'university', 'current_company', 'hobbies')
