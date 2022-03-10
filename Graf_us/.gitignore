@@ -8,4 +8,4 @@ frontend/node_modules
 .DS_Store
 
 # Remove cached python
-api/__pycache__/
+*/__pycache__/
