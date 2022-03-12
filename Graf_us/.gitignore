@@ -7,5 +7,5 @@ frontend/node_modules
 # Custom attributes
 .DS_Store
 
-# Remove cached python
-*/__pycache__/
+# Python compiled files
+*.pyc
