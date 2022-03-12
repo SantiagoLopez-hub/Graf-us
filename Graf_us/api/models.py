@@ -40,6 +40,9 @@ class Connection(models.Model):
     to_user = models.ForeignKey(User, on_delete=models.CASCADE)
     approval_status = models.BooleanField(default=False)
 
+    class Meta:
+        unique_together = ('from_user', 'to_user')
+
 
 # Many-to-one Relationship with User
 class Post(models.Model):
