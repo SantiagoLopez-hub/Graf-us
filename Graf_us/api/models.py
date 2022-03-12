@@ -18,16 +18,16 @@ class User(models.Model):
 
 # One to one Relationship with User
 class Profile(models.Model):
+    id = models.AutoField(primary_key=True)
     user = models.OneToOneField(
         User,
-        on_delete=models.CASCADE,
-        primary_key=True
+        on_delete=models.CASCADE
     )
     description = models.TextField()
     college = models.CharField(max_length=255, null=True)
     university = models.CharField(max_length=255, null=True)
     current_company = models.CharField(max_length=255, null=True)
-    hobbies = models.TextField()
+    hobbies = models.TextField(null=True)
 
 
 # Many-to-one Relationship with User
