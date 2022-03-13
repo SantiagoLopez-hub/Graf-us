@@ -31,6 +31,15 @@ class Profile(models.Model):
 
 
 # Many-to-one Relationship with User
+class Post(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    title = models.CharField(max_length=255, null=False)
+    caption = models.TextField()
+    likes = models.IntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+
+# Many-to-one Relationship with User
 class Connection(models.Model):
     from_user = models.ForeignKey(
         User,
@@ -43,11 +52,3 @@ class Connection(models.Model):
     class Meta:
         unique_together = ('from_user', 'to_user')
 
-
-# Many-to-one Relationship with User
-class Post(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    title = models.CharField(max_length=255, null=False)
-    caption = models.TextField()
-    likes = models.IntegerField()
-    created_at = models.DateTimeField(auto_now_add=True)
