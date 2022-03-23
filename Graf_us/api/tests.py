@@ -1,13 +1,16 @@
 from django.test import TestCase
 from api.models import User, Connection
+from faker import Faker
+fake = Faker()
 
 
 # Test users
 class UserTestCase(TestCase):
-    email1 = 'a'
-    email2 = 'b'
-    password1 = ''
-    password2 = ''
+    # Generate fake data
+    email1 = fake.name().split()[0].lower() + '@gmail.com'
+    email2 = fake.name().split()[0].lower() + '@gmail.com'
+    password1 = fake.text(8)
+    password2 = fake.text(8)
 
     def setUp(self):
         User.objects.create(
