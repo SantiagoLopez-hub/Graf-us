@@ -1,5 +1,5 @@
 from django.test import TestCase
-from api.models import User, Profile, Connection
+from api.models import *
 from faker import Faker
 
 fake = Faker()
@@ -35,6 +35,17 @@ class UserTestCase(TestCase):
         )
 
         self.assertEqual(user1.pk, profile1.user_id)
+
+    def test_users_can_post(self):
+        user2 = User.objects.get(email=self.email1)
+        post2 = Post.objects.create(
+            user=user2,
+            title=fake.text(255),
+            caption=fake.text(255),
+            likes=fake.random.getstate()[1][0]
+        )
+
+        self.assertEqual(user2, post2.user)
 
     def test_users_can_connect(self):
         """Check users can connect correctly"""
