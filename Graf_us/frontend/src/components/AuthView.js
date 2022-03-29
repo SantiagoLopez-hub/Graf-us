@@ -8,11 +8,16 @@ import LinkedInButton from './LinkedInButton';
 
 
 function AuthView(props) {
+    let token = "";
     const { linkedInLogin } = useLinkedIn({
         clientId: '78y1jk156vmhwy',
+        //window.location.origin + '/callback'
+        //https://www.linkedin.com/oauth/v2/accessToken
         redirectUri: window.location.origin, // for Next.js, you can use `${typeof window === 'object' && window.location.origin}/linkedin`
-        onSuccess: (code) => {  
-          console.log(code);
+        onSuccess: (code) => {
+          //  create user in our database
+          console.log("Redirect Code : "+code);
+          token = code;
         },
         onError: (error) => {
           console.log(error);
@@ -21,8 +26,14 @@ function AuthView(props) {
 
       console.log(props.isSignIn);
 
-    return (
+      if(token != ""){
+          return (<div>
+              <h1>{token}</h1>
+          </div>)
+      }else {
+           return (
         <Box>
+            <h3>TESTING: {linkedInLogin} </h3>
             <Box style={{...styles.container, ...props.style}}>
                 <Box>
                     <CText textStyle={textStyles.headline3} style={{ paddingBottom: 15 }}>Hey there!</CText>
@@ -38,6 +49,8 @@ function AuthView(props) {
             </Box>
         </Box>
     );
+      }
+
 }
 
 const styles = {
