@@ -8,5 +8,6 @@ urlpatterns = [
     path('jobs/', index),
     path('connect/', index),
     path('contact-us/', index),
-    path('about-us/', index)
+    path('about-us/', index),
+    path('auth/linkedin/callback/', index)
 ]

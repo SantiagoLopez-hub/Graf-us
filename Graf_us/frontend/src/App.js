@@ -24,6 +24,7 @@ function App() {
           <Route path='/connect' element={<ConnectScreen />} />
           <Route path='/contact-us' element={<ContactScreen />} />
           <Route path='/about-us' element={<AboutUsScreen />} />
+          <Route path='/auth/linkedin/callback' element={<GrafScreen />} />
         </Routes>
       </BrowserRouter>
     </Box>
