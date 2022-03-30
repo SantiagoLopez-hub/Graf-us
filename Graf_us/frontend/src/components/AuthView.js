@@ -8,31 +8,26 @@ import LinkedInButton from './LinkedInButton';
 
 
 function AuthView(props) {
-	let [token] = '';
 	const { linkedInLogin } = useLinkedIn({
 		clientId: '78y1jk156vmhwy',
 		redirectUri: window.location.origin + '/auth/linkedin/callback',
 		onSuccess: (code) => {
 			//  create user in database
-			fetch(window.location.origin + '/api/saveUser', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(code),
-			})
-				.then(response => response.json())
-				.then(data => {
-					token = data
-				})
-				.catch((error) => {
-					console.error('Error:', error);
-				});
+			console.log(code);
 		},
 		onError: (error) => {
 			console.log(error);
 		},
 	});
+
+	// fetch('https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id='
+	// 	+ '78y1jk156vmhwy'
+	// 	+ '&redirect_uri='
+	// 	+ window.location.origin + '/auth/linkedin/callback'
+	// 	+ '&state=foobar&scope=r_liteprofile%20r_emailaddress%20w_member_social')
+	// 	.then((value) => {
+	// 		console.log(value);
+	// 	});
 
 	console.log(props.isSignIn);
 
