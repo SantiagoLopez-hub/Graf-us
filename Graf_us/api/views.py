@@ -3,7 +3,7 @@ from rest_framework import generics, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import User, Connection, Profile, Post
-from .serializers import UserSerializer, ConnectionSerializer, ProfileSerializer, PostSerializer
+from .serializers import *
 
 
 class UserView(generics.CreateAPIView):
@@ -26,12 +26,13 @@ class PostView(generics.CreateAPIView):
     serializer_class = PostSerializer
 
 
-class CreateUserView(APIView):
+class CreateUser(APIView):
     serializer_class = UserSerializer
 
     def post(self, request):
         if not self.request.session.exists(self.request.session.session_key):
             self.request.session.create()
+
         ser = self.serializer_class(data=request.data)
 
         if ser.is_valid():
@@ -39,10 +40,7 @@ class CreateUserView(APIView):
             password = ser.data.get('password')
             first_name = ser.data.get('first_name')
             last_name = ser.data.get('last_name')
-            date_of_birth = ser.data.get('date_of_birth')
-            created_at = ser.data.get('created_at')
-            host = self.request.session.session_key
-            qs = User.objects.filter(host=host)
+            qs = User.objects.filter(email=email)
 
             if qs.exists():
                 user = qs[0]
@@ -50,17 +48,14 @@ class CreateUserView(APIView):
                 user.password = password
                 user.first_name = first_name
                 user.last_name = last_name
-                user.date_of_birth = date_of_birth
-                user.created_at = created_at
-                user.save(update_fields=['email', 'password', 'first_name', 'last_name', 'date_of_birth', 'created_at'])
+                user.save(update_fields=['email', 'password', 'first_name', 'last_name'])
             else:
-                user = User(host=host,
-                            email=email,
+                user = User(email=email,
                             password=password,
                             first_name=first_name,
-                            last_name=last_name,
-                            date_of_birth=date_of_birth,
-                            created_at=created_at)
+                            last_name=last_name)
                 user.save()
 
-            return Response(UserSerializer(user).data, status=status.HTTP_201_CREATED)
+            return Response(status=status.HTTP_201_CREATED)
+
+        return Response(status=status.HTTP_406_NOT_ACCEPTABLE)

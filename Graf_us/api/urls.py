@@ -6,5 +6,5 @@ urlpatterns = [
     path('connection', ConnectionView.as_view()),
     path('profile', ProfileView.as_view()),
     path('post', PostView.as_view()),
-    path('save-user', CreateUserView().as_view())
+    path('save-user', CreateUser().as_view())
 ]
