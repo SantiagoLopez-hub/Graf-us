@@ -1,10 +1,11 @@
 import { Box } from '@chakra-ui/react';
-import React from 'react';
+import React, {useEffect} from 'react';
 
 function LinkedInLogin(props) {
 	const code = new URL(window.location.href).searchParams.get("code");
 	const clientId = '78y1jk156vmhwy';
 	const clientSecret = 'nW2yhW8hBztmtwFk';
+	const redirectURI = window.location.origin + '/auth/linkedin/callback';
 
 	/*fetch('/api/save-user', {
 		method: 'POST',
@@ -27,30 +28,31 @@ function LinkedInLogin(props) {
 			console.error('Error:', error);
 		});*/
 
-
-	let headers = new Headers();
-	headers.append('Content-Type', 'x-www-form-urlencoded');
-	headers.append('Accept', 'application/json');
-	headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:8000');
-	headers.append('Access-Control-Allow-Credentials', 'true');
-
-	fetch('https://www.linkedin.com/oauth/v2/accessToken' +
-		'?client_id=' + clientId +
-		'&client_secret=' + clientSecret +
-		'&grant_type=' + 'authorization_code' +
-		'&redirect_uri=' + window.location.origin + '/auth/linkedin/callback' +
-		'&code=' + code, {
+	// Get LinkedIn Access token
+	useEffect(() => {
+		fetch('https://api.allorigins.win/get?url=' +
+			encodeURIComponent('https://www.linkedin.com/oauth/v2/accessToken' +
+				'?grant_type=authorization_code' +
+				`&client_id=${clientId}` +
+				`&client_secret=${clientSecret}` +
+				`&redirect_uri=${redirectURI}` +
+				`&code=${code}`), {
 			method: 'POST',
-			headers : headers,
-			mode: 'no-cors'
-		}).then(data => console.log(data));
+			headers: {
+				'Content-Type': 'x-www-form-urlencoded'
+			}
+		})
+			.then(response => {
+				if (response.ok)
+					return response.json();
+				throw new Error('Network response error');
+			})
+			.then(data => console.log(data.contents));
+	},[]);
 
     return (
         <Box flex={1}>
-            Code:
-	        <br />
-	        { code }
-	        <br />
+            Testing site
         </Box>
     );
 }
