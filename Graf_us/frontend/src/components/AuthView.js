@@ -6,77 +6,64 @@ import { colors, shadows, textStyles } from '../themeData';
 import CText from './CText';
 import LinkedInButton from './LinkedInButton';
 
-
 function AuthView(props) {
-    let token = "";
-    const { linkedInLogin } = useLinkedIn({
-        clientId: '78y1jk156vmhwy',
-        //window.location.origin + '/callback'
-        //https://www.linkedin.com/oauth/v2/accessToken
-        redirectUri: window.location.origin, // for Next.js, you can use `${typeof window === 'object' && window.location.origin}/linkedin`
-        onSuccess: (code) => {
-          //  create user in our database
-          console.log("Redirect Code : "+code);
-          token = code;
-        },
-        onError: (error) => {
-          console.log(error);
-        },
-      });
+	const { linkedInLogin } = useLinkedIn({
+		clientId: '78y1jk156vmhwy',
+		scope: 'r_liteprofile r_emailaddress',
+		redirectUri: window.location.origin + '/auth/linkedin/callback',
+		onSuccess: (code) => {
+			console.log(code);
+		},
+		onError: (error) => {
+			console.log(error);
+		},
+	});
 
-      console.log(props.isSignIn);
+	console.log(props.isSignIn);
 
-      if(token != ""){
-          return (<div>
-              <h1>{token}</h1>
-          </div>)
-      }else {
-           return (
-        <Box>
-            <h3>TESTING: {linkedInLogin} </h3>
-            <Box style={{...styles.container, ...props.style}}>
-                <Box>
-                    <CText textStyle={textStyles.headline3} style={{ paddingBottom: 15 }}>Hey there!</CText>
-                    <CText textStyle={textStyles.body1} style={{ color: colors.darkGrey, width: 230, marginBottom: 'auto', lineHeight: 1.40 }}>{props.isSignIn ? 'Sign ' : 'Login ' }in with you LinkedIn so we can get started to help you expand your network 🌎</CText>
-                </Box>
-                <LinkedInButton onClick={linkedInLogin} label={`${props.isSignIn ? 'Sign in ' : 'Log in '} in with LinkedIn`}/>
-            </Box>
-            <Box style={styles.loginText}>
-                <CText textStyle={textStyles.subtitle2} style={{ color: colors.grey, paddingRight: 6 }}>{props.isSignIn ? 'Already have an account?' : 'Not signed up yet?'}</CText>
-                <Link color={colors.blue} href='#' onClick={() => props.setIsSignIn(!props.isSignIn)}>
-                    <CText textStyle={textStyles.subtitle2} style={{ color: colors.blue.main }}>{props.isSignIn ? 'Login ' : 'Sign up ' }instead </CText>
-                </Link>
-            </Box>
-        </Box>
-    );
-      }
-
+	return (
+		<Box>
+			<Box style={{...styles.container, ...props.style}}>
+				<Box>
+					<CText textStyle={textStyles.headline3} style={{ paddingBottom: 15 }}>Hey there!</CText>
+					<CText textStyle={textStyles.body1} style={{ color: colors.darkGrey, width: 230, marginBottom: 'auto', lineHeight: 1.40 }}>{props.isSignIn ? 'Sign ' : 'Login ' }in with you LinkedIn so we can get started to help you expand your network 🌎</CText>
+				</Box>
+				<LinkedInButton onClick={linkedInLogin} label={`${props.isSignIn ? 'Sign in ' : 'Log in '} in with LinkedIn`}/>
+			</Box>
+			<Box style={styles.loginText}>
+				<CText textStyle={textStyles.subtitle2} style={{ color: colors.grey, paddingRight: 6 }}>{props.isSignIn ? 'Already have an account?' : 'Not signed up yet?'}</CText>
+				<Link color={colors.blue} href='#' onClick={() => props.setIsSignIn(!props.isSignIn)}>
+					<CText textStyle={textStyles.subtitle2} style={{ color: colors.blue.main }}>{props.isSignIn ? 'Login ' : 'Sign up ' }instead </CText>
+				</Link>
+			</Box>
+		</Box>
+	);
 }
 
 const styles = {
-    container: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        paddingLeft: 25,
-        paddingRight: 25,
-        paddingTop: 25,
-        paddingBottom: 25,
-        width: 285,
-        backgroundColor: colors.white,
-        borderRadius: 20, 
-        boxShadow: shadows.xl.main
-    },
-    loginText: {
-        flexDirection: 'row', 
-        display: 'flex', 
-        justifyContent: 'center', 
-        paddingTop: 10,
-    },
-    logo: {
-        marginLeft: 150,
-        marginBottom: 15,
-    }
+	container: {
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'space-between',
+		paddingLeft: 25,
+		paddingRight: 25,
+		paddingTop: 25,
+		paddingBottom: 25,
+		width: 285,
+		backgroundColor: colors.white,
+		borderRadius: 20,
+		boxShadow: shadows.xl.main
+	},
+	loginText: {
+		flexDirection: 'row',
+		display: 'flex',
+		justifyContent: 'center',
+		paddingTop: 10,
+	},
+	logo: {
+		marginLeft: 150,
+		marginBottom: 15,
+	}
 }
 
 export default AuthView;

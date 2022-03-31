@@ -10,6 +10,7 @@ import JobScreen from "./pages/JobScreen";
 import ConnectScreen from "./pages/ConnectScreen";
 import ContactScreen from "./pages/ContactScreen";
 import AboutUsScreen from "./pages/AboutUsScreen";
+import LinkedInLogin from "./pages/LinkedInLogin";
 // import '../App.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path='/connect' element={<ConnectScreen />} />
           <Route path='/contact-us' element={<ContactScreen />} />
           <Route path='/about-us' element={<AboutUsScreen />} />
+          <Route path='/auth/linkedin/callback' element={<LinkedInLogin />} />
         </Routes>
       </BrowserRouter>
     </Box>
