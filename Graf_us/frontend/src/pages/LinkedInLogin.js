@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/react';
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
 function LinkedInLogin(props) {
 	const code = new URL(window.location.href).searchParams.get("code");
@@ -41,13 +41,42 @@ function LinkedInLogin(props) {
 			headers: {
 				'Content-Type': 'x-www-form-urlencoded'
 			}
-		})
-			.then(response => {
-				if (response.ok)
-					return response.json();
-				throw new Error('Network response error');
+		}).then(response => {
+			if (response.ok)
+				return response.json();
+			throw new Error('Network response error');
+		}).then(data => {
+			/*fetch('https://api.allorigins.win/get?url=' +
+				'https://api.linkedin.com/v2/me' +
+				'?projection=(id,firstName,lastName,profilePicture' +
+				'(displayImage~:playableStreams))', {
+				method: 'GET',
+				// mode: 'no-cors',
+				headers: {
+					'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8',
+					// "Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
+					// "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+					'Authorization': `Bearer ${JSON.parse(data.contents)['access_token']}`
+				}
 			})
-			.then(data => console.log(data.contents));
+				.then(response => response.json())
+				.catch()
+				.then(data => console.log(data));
+			 */
+
+			fetch('https://api.allorigins.win/get?url=' +
+				encodeURIComponent('https://api.linkedin.com/v2/emailAddress?' +
+					'q=members&projection=(elements*(handle~))' +
+					'&oauth2_access_token=' +
+					JSON.parse(data.contents)['access_token']))
+				.then(response => response.json())
+				.catch(error => console.log('Error: ' + error))
+				.then(data =>
+					// Print email address to the console
+					console.log(JSON.parse(data.contents)['elements'][0]['handle~']['emailAddress'])
+				);
+		});
 	},[]);
 
     return (
