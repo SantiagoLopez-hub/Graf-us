@@ -7,27 +7,6 @@ function LinkedInLogin(props) {
 	const clientSecret = 'nW2yhW8hBztmtwFk';
 	const redirectURI = window.location.origin + '/auth/linkedin/callback';
 
-	/*fetch('/api/save-user', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify({
-			email: "asdfl35@gail.com",
-			password: "code",
-			first_name: "code",
-			last_name: "code",
-			code: code
-		}),
-	})
-		.then(response => response.json())
-		.then(data => {
-			console.log(data);
-		})
-		.catch((error) => {
-			console.error('Error:', error);
-		});*/
-
 	// Get LinkedIn Access token
 	useEffect(() => {
 		fetch('https://api.allorigins.win/get?url=' +
@@ -55,30 +34,52 @@ function LinkedInLogin(props) {
 				JSON.parse(token.contents)['access_token']))
 				.then(response => response.json())
 				.catch()
-				.then(data => {
+				.then(name => {
 					// Name
-					console.log(JSON.parse(data.contents)['firstName']['localized']['en_US']);
+					const firstName = JSON.parse(name.contents)['firstName']['localized']['en_US'];
+					console.log(firstName);
 
 					// Surname
-					console.log(JSON.parse(data.contents)['lastName']['localized']['en_US']);
+					const lastName = JSON.parse(name.contents)['lastName']['localized']['en_US'];
+					console.log(lastName);
+
+
+					/* Get user's email address */
+					fetch('https://api.allorigins.win/get?url=' +
+						encodeURIComponent('https://api.linkedin.com/v2/emailAddress?' +
+							'q=members&projection=(elements*(handle~))' +
+							'&oauth2_access_token=' +
+							JSON.parse(token.contents)['access_token']))
+						.then(response => response.json())
+						.catch(error => console.log('Error: ' + error))
+						.then(email => {
+								// Print email address to the console
+								const emailAddress = JSON.parse(email.contents)['elements'][0]['handle~']['emailAddress'];
+								console.log(emailAddress);
+
+
+								// Save user to database
+								fetch('/api/save-user', {
+									method: 'POST',
+									headers: {
+										'Content-Type': 'application/json'
+									},
+									body: JSON.stringify({
+										email: emailAddress,
+										first_name: firstName,
+										last_name: lastName
+									})
+								})
+									.then(response => response.json())
+									.then(data => {
+										console.log(data);
+									})
+									.catch((error) => {
+										console.error('Error:', error);
+									});
+							}
+						);
 				});
-
-
-			/* Get user's email address */
-
-			/*fetch('https://api.allorigins.win/get?url=' +
-				encodeURIComponent('https://api.linkedin.com/v2/emailAddress?' +
-					'q=members&projection=(elements*(handle~))' +
-					'&oauth2_access_token=' +
-					JSON.parse(token.contents)['access_token']))
-				.then(response => response.json())
-				.catch(error => console.log('Error: ' + error))
-				.then(data =>
-					// Print email address to the console
-					console.log(JSON.parse(data.contents)['elements'][0]['handle~']['emailAddress'])
-				);
-
-			 */
 		});
 	},[]);
 

@@ -37,7 +37,6 @@ class CreateUser(APIView):
 
         if ser.is_valid():
             email = ser.data.get('email')
-            password = ser.data.get('password')
             first_name = ser.data.get('first_name')
             last_name = ser.data.get('last_name')
             qs = User.objects.filter(email=email)
@@ -45,13 +44,11 @@ class CreateUser(APIView):
             if qs.exists():
                 user = qs[0]
                 user.email = email
-                user.password = password
                 user.first_name = first_name
                 user.last_name = last_name
-                user.save(update_fields=['email', 'password', 'first_name', 'last_name'])
+                user.save(update_fields=['email', 'first_name', 'last_name'])
             else:
                 user = User(email=email,
-                            password=password,
                             first_name=first_name,
                             last_name=last_name)
                 user.save()
