@@ -1,8 +1,7 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 from rest_framework import generics, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .models import User, Connection, Profile, Post
 from .serializers import *
 
 
@@ -26,8 +25,16 @@ class PostView(generics.CreateAPIView):
     serializer_class = PostSerializer
 
 
-class CreateUser(APIView):
+class UserMethods(APIView):
     serializer_class = UserSerializer
+
+    def get(self, request):
+        current = User.objects.get(email__exact=request.GET.get('email', ''))
+        return Response({
+            'email': current.email,
+            'firstName': current.first_name,
+            'lastName': current.last_name
+        }, status=status.HTTP_200_OK)
 
     def post(self, request):
         if not self.request.session.exists(self.request.session.session_key):

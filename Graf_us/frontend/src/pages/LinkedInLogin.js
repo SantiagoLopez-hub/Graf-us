@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React, {useEffect} from 'react';
+import Cookies from 'universal-cookie';
 
 
 const code = new URL(window.location.href).searchParams.get("code");
@@ -19,7 +20,7 @@ function getAccessToken() {
 		headers: {
 			'Content-Type': 'x-www-form-urlencoded'
 		}
-	})
+	});
 }
 
 function getUserName(token) {
@@ -36,7 +37,7 @@ function getUserEmail(token) {
 		encodeURIComponent('https://api.linkedin.com/v2/emailAddress?' +
 			'q=members&projection=(elements*(handle~))' +
 			'&oauth2_access_token=' +
-			JSON.parse(token.contents)['access_token']))
+			JSON.parse(token.contents)['access_token']));
 }
 
 function saveUser(firstName, lastName, email) {
@@ -50,7 +51,7 @@ function saveUser(firstName, lastName, email) {
 			first_name: firstName,
 			last_name: lastName
 		})
-	})
+	});
 }
 
 function LinkedInLogin(props) {
@@ -82,6 +83,10 @@ function LinkedInLogin(props) {
 							// Email address
 							const emailAddress = JSON.parse(email.contents)
 								['elements'][0]['handle~']['emailAddress'];
+
+							// Save email in cookies
+							const user = new Cookies();
+							user.set('email', emailAddress, { path: '/' });
 
 
 							/* Save user to database */
