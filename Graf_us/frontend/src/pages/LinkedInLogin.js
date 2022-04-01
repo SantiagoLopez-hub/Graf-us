@@ -88,7 +88,9 @@ function LinkedInLogin(props) {
 							saveUser(firstName, lastName, emailAddress)
 								.then(response => response.json())
 								.catch(error => console.log('Error: ' + error))
-								.then(data => console.log(data));
+								.then(() => {
+									window.location.replace("/graf");
+								});
 							}
 						);
 				});
@@ -97,7 +99,7 @@ function LinkedInLogin(props) {
 
     return (
         <Box flex={1}>
-            Testing site
+	        Logging in... Please wait...
         </Box>
     );
 }
