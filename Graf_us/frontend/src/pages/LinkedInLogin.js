@@ -85,8 +85,14 @@ function LinkedInLogin(props) {
 								['elements'][0]['handle~']['emailAddress'];
 
 							// Save email in cookies
-							const user = new Cookies();
-							user.set('email', emailAddress, { path: '/' });
+							const cookies = new Cookies();
+							// Create expiring date to be 7 days from the moment
+			                //the user accesses last the site
+			                let expiringDate = new Date(Date.now() + 604800);
+							cookies.set('user', cookies.set('user', {
+			                    email: emailAddress
+
+			                }, { path: '/', expires: expiringDate }));
 
 
 							/* Save user to database */
