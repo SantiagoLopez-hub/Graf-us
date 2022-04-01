@@ -1,8 +1,27 @@
 from rest_framework import serializers
-from .models import Room
+from .models import User, Connection, Profile, Post
 
 
-class RoomSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Room
-        fields = ('id', 'code', 'host', 'guest_can_pause', 'votes_to_skip', 'created_at')
+        model = User
+        fields = ('email', 'first_name', 'last_name')
+
+
+class ConnectionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Connection
+        fields = ('from_user', 'to_user', 'approval_status')
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Profile
+        fields = ('user', 'description', 'college', 'university', 'current_company', 'hobbies')
+
+
+class PostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = ('user', 'title', 'caption', 'likes', 'created_at')
+

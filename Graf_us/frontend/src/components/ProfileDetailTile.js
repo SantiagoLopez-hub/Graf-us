@@ -9,21 +9,22 @@ import LinkedInButton from './LinkedInButton';
 import CButton from './CButton';
 import SideProfile from './SideProfile';
 
+
 function ProfileDetailTile(props) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
 
-    const exampleProfile = {
-        firstName: 'Fabian',
-        lastName: 'Simon',
-        email: 'fs@payuca.com',
+    const userProfile = {
+        firstName: props.firstName,
+        lastName: props.lastName,
+        email: props.email,
         age: 44,
         city: 'Vienna',
         country: 'Austria',
         jobTitle: 'CEO',
         highestEducation: 'University of Goldsmiths',
         languages: ['English', 'German'],
-        skills: ['Beating Richard at Tennis', 'Front-end', 'UI/UX', 'SQLite', 'Managerial skills'],
+        skills: ['Tennis', 'Front-end', 'UI/UX', 'SQLite', 'Managerial skills'],
         estimatedSalary: 120000,
         linkedinUrl: 'https://www.linkedin.com/in/fabian-simon-dev/',
         accountCreatedIn: 2019,
@@ -33,8 +34,8 @@ function ProfileDetailTile(props) {
         <Box minW={280} h={85} bg={colors.white} borderRadius={10} boxShadow={'sm'} padding={2}>
             <HStack justify={'space-between'} paddingX={2} paddingTop={1}>
                 <Stack>
-                    <CText textStyle={textStyles.headline4}>{`${exampleProfile.firstName} ${exampleProfile.lastName}`}</CText>
-                    <CText textStyle={textStyles.body2} style={{ color: colors.mediumGrey }}>{`${exampleProfile.age} years old • ${exampleProfile.city}, ${exampleProfile.country}`}</CText>
+                    <CText textStyle={textStyles.headline4}>{`${userProfile.firstName} ${userProfile.lastName}`}</CText>
+                    <CText textStyle={textStyles.body2} style={{ color: colors.mediumGrey }}>{`${userProfile.age} years old • ${userProfile.city}, ${userProfile.country}`}</CText>
                 </Stack>
                 <Menu>
                     <MenuButton
@@ -49,7 +50,7 @@ function ProfileDetailTile(props) {
                     />
                 </Menu>
             </HStack>
-            <SideProfile user={exampleProfile} isOpen={isOpen} onClose={onClose} btnRef={btnRef}/>
+            <SideProfile user={userProfile} isOpen={isOpen} onClose={onClose} btnRef={btnRef}/>
         </Box>
     );
 }

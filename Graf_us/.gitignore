@@ -1,11 +1,11 @@
 # Pycharm IDE
 .idea
-/.idea
-Graf_us/.idea
-/Graf_us/.idea
 
 # Node modules
 frontend/node_modules
-/frontend/node_modules
-Graf_us/frontend/node_modules
-/Graf_us/frontend/node_modules
+
+# Custom attributes
+.DS_Store
+
+# Python compiled files
+*.pyc

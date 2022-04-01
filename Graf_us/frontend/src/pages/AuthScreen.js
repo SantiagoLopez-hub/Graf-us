@@ -16,7 +16,7 @@ function AuthScreen() {
         { !isMobile && <CText style={styles.leftSource}>*According to statistics provided by LinkedIn </CText>}
         <Box alignItems='center'>
           <Center>
-            <LogoSVG style={{ marginBottom: 12 }}/>
+            {/*<LogoSVG style={{ marginBottom: 12 }}/>*/}
           </Center>
           <AuthView isSignIn={isSignIn} setIsSignIn={setIsSignIn}/>  
         </Box>

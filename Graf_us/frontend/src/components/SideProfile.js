@@ -34,7 +34,7 @@ function SideProfile({ user, isOpen, onClose, btnRef }) {
                             <InfoRow description='Job title' title={`${user.jobTitle}`} ceo/>
                             <InfoRow description='Highest Education' title={`${user.highestEducation}`} />
                             <InfoRow description='Languages' title={user.languages.join(', ')} />
-                            <InfoRow description='Languages' chipList={user.skills} />
+                            <InfoRow description='Skills' chipList={user.skills} />
                             <InfoRow description='Estimated Salary' salary={user.estimatedSalary} percentage={100.3}/>
                         </Stack>
                     </DrawerBody>
