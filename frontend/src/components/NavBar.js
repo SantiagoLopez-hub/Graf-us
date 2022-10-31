@@ -15,11 +15,11 @@ function NavBar(props) {
             <HStack w={'100%'} justify={'space-between'}>
                 <LogoSVG cursor={'pointer'}/>
                 <HStack spacing={width*0.05} >
-                    <NavBarText string={"Home"} isActive={true}/>
-                    <NavBarText string={"Connect"} isActive={false}/>
-                    <NavBarText string={"Jobs"} isActive={false}/>
-                    <NavBarText string={"About Us"} isActive={false}/>
-                    <NavBarText string={"Contact"} isActive={false}/>
+                    <NavBarText string={"Home"} url={"graf"} isActive={true}/>
+                    <NavBarText string={"Connect"} url={"connect"} isActive={false}/>
+                    <NavBarText string={"Jobs"} url={"jobs"} isActive={false}/>
+                    <NavBarText string={"About Us"} url={"about-us"} isActive={false}/>
+                    <NavBarText string={"Contact"} url={"contact-us"} isActive={false}/>
                 </HStack>
                 <AccountInsight />
             </HStack>
